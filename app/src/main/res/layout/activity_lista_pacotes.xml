@@ -9,11 +9,13 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="match_constraint"
+        android:layout_width="0dp"
         android:layout_height="120dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@android:color/holo_purple" />
 
     <TextView
@@ -22,6 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:text="@string/specials"
+        android:textColor="@android:color/white"
         android:textSize="24sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -32,6 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Brasil"
+        android:textColor="@android:color/white"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/textView2"
