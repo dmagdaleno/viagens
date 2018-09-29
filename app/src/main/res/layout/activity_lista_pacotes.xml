@@ -7,6 +7,15 @@
     android:layout_height="match_parent"
     tools:context=".ListaPacotesActivity">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_constraint"
+        android:layout_height="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:color/holo_purple" />
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
