@@ -9,12 +9,17 @@ import kotlinx.android.synthetic.main.activity_lista_pacotes.*
 
 class ListaPacotesActivity : AppCompatActivity() {
 
+    companion object {
+        private const val TITULO_APP = "Pacotes"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lista_pacotes)
 
-        val pacotes = PacoteDao().lista()
+        title = TITULO_APP
 
+        val pacotes = PacoteDao().lista()
         lista_pacotes_list.adapter = ListaPacotesAdapter(this, pacotes)
     }
 }
