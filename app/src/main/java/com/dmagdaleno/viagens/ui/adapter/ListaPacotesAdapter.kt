@@ -1,13 +1,13 @@
 package com.dmagdaleno.viagens.ui.adapter
 
 import android.content.Context
-import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import com.dmagdaleno.viagens.R
 import com.dmagdaleno.viagens.extensions.formatado
+import com.dmagdaleno.viagens.extensions.getDrawableResource
 import com.dmagdaleno.viagens.model.Pacote
 import kotlinx.android.synthetic.main.item_pacote.view.*
 
@@ -32,7 +32,7 @@ class ListaPacotesAdapter(
     }
 
     private fun View.configuraImagem(pacote: Pacote) {
-        item_pacote_imagem.setImageDrawable(getDrawable(pacote))
+        item_pacote_imagem.setImageDrawable(context.getDrawableResource(pacote.imagem))
     }
 
     private fun View.configuraPreco(pacote: Pacote) {
@@ -52,13 +52,6 @@ class ListaPacotesAdapter(
             "$dias dia"
         } else {
             "$dias dias"
-        }
-    }
-
-    private fun View.getDrawable(pacote: Pacote): Drawable? {
-        with(context.resources){
-            val id = getIdentifier(pacote.imagem, "drawable", context.packageName)
-            return getDrawable(id)
         }
     }
 
