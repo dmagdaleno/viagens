@@ -22,13 +22,29 @@ class ListaPacotesAdapter(
         val pacote = pacotes[position]
 
         with(inflate) {
-            item_pacote_local.text = pacote.local
-            item_pacote_dias.text = getDiasLabel(pacote.dias)
-            item_pacote_preco.text = pacote.preco.formatado()
-            item_pacote_imagem.setImageDrawable(getDrawable(pacote))
+            configuraLocal(pacote)
+            configuraDias(pacote)
+            configuraPreco(pacote)
+            configuraImagem(pacote)
         }
 
         return inflate
+    }
+
+    private fun View.configuraImagem(pacote: Pacote) {
+        item_pacote_imagem.setImageDrawable(getDrawable(pacote))
+    }
+
+    private fun View.configuraPreco(pacote: Pacote) {
+        item_pacote_preco.text = pacote.preco.formatado()
+    }
+
+    private fun View.configuraDias(pacote: Pacote) {
+        item_pacote_dias.text = getDiasLabel(pacote.dias)
+    }
+
+    private fun View.configuraLocal(pacote: Pacote) {
+        item_pacote_local.text = pacote.local
     }
 
     private fun getDiasLabel(dias: Int): String {
