@@ -23,12 +23,20 @@ class ListaPacotesAdapter(
 
         with(inflate) {
             item_pacote_local.text = pacote.local
-            item_pacote_dias.text = "${pacote.dias} dias"
-            item_pacote_preco.text = "R$ ${pacote.preco.formatado()}"
+            item_pacote_dias.text = getDiasLabel(pacote.dias)
+            item_pacote_preco.text = pacote.preco.formatado()
             item_pacote_imagem.setImageDrawable(getDrawable(pacote))
         }
 
         return inflate
+    }
+
+    private fun getDiasLabel(dias: Int): String {
+        return if(dias == 1) {
+            "$dias dia"
+        } else {
+            "$dias dias"
+        }
     }
 
     private fun View.getDrawable(pacote: Pacote): Drawable? {
