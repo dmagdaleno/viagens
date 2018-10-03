@@ -19,6 +19,10 @@ class ListaPacotesActivity : AppCompatActivity() {
 
         title = TITULO_APP
 
+        configuraListaPacotes()
+    }
+
+    private fun configuraListaPacotes() {
         val pacotes = PacoteDao().lista()
         lista_pacotes_list.adapter = ListaPacotesAdapter(this, pacotes)
     }
