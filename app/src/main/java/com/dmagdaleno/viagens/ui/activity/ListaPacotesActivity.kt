@@ -1,5 +1,6 @@
 package com.dmagdaleno.viagens.ui.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.dmagdaleno.viagens.R
@@ -20,6 +21,9 @@ class ListaPacotesActivity : AppCompatActivity() {
         title = TITULO_APP
 
         configuraListaPacotes()
+
+        val i = Intent(this, ResumoPacoteActivity::class.java)
+        startActivity(i)
     }
 
     private fun configuraListaPacotes() {
