@@ -1,4 +1,4 @@
-package com.dmagdaleno.viagens.extensions
+package com.dmagdaleno.viagens.functions.extensions
 
 import java.math.BigDecimal
 import java.text.DecimalFormat

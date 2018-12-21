@@ -1,4 +1,4 @@
-package com.dmagdaleno.viagens.extensions
+package com.dmagdaleno.viagens.functions.extensions
 
 import android.content.Context
 import android.graphics.drawable.Drawable
