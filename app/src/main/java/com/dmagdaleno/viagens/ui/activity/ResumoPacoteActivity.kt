@@ -1,14 +1,12 @@
 package com.dmagdaleno.viagens.ui.activity
 
-import android.content.res.Resources
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import com.dmagdaleno.viagens.R
 import com.dmagdaleno.viagens.extensions.getDrawableResource
 import com.dmagdaleno.viagens.model.Pacote
 import kotlinx.android.synthetic.main.activity_resumo_pacote.*
 import java.math.BigDecimal
-import java.util.*
 
 class ResumoPacoteActivity : AppCompatActivity() {
 
