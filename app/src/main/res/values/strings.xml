@@ -4,4 +4,7 @@
     <string name="brasil">Brasil</string>
     <string name="banner_cabecalho">Banner do cabeçalho</string>
     <string name="foto_local">Foto do local</string>
+    <string name="final_price">Preço final:</string>
+    <string name="region">imagem da regiao</string>
+    <string name="pay">Realizar Pagamento</string>
 </resources>
