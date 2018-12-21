@@ -6,8 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import com.dmagdaleno.viagens.R
-import com.dmagdaleno.viagens.extensions.formatado
-import com.dmagdaleno.viagens.extensions.getDrawableResource
+import com.dmagdaleno.viagens.functions.extensions.formatado
+import com.dmagdaleno.viagens.functions.extensions.getDrawableResource
+import com.dmagdaleno.viagens.functions.getDiasText
 import com.dmagdaleno.viagens.model.Pacote
 import kotlinx.android.synthetic.main.item_pacote.view.*
 
@@ -40,19 +41,11 @@ class ListaPacotesAdapter(
     }
 
     private fun View.configuraDias(pacote: Pacote) {
-        item_pacote_dias.text = getDiasLabel(pacote.dias)
+        item_pacote_dias.text = getDiasText(pacote.dias)
     }
 
     private fun View.configuraLocal(pacote: Pacote) {
         item_pacote_local.text = pacote.local
-    }
-
-    private fun getDiasLabel(dias: Int): String {
-        return if(dias == 1) {
-            "$dias dia"
-        } else {
-            "$dias dias"
-        }
     }
 
     override fun getItem(position: Int): Pacote {
