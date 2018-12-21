@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.item_pacote.view.*
 
 class ListaPacotesAdapter(
         val context: Context,
-        val pacotes: List<Pacote>) : BaseAdapter() {
+        private val pacotes: List<Pacote>) : BaseAdapter() {
 
     override fun getView(position: Int, view: View?, group: ViewGroup?): View {
         val inflate = LayoutInflater.from(context)
