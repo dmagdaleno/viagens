@@ -15,14 +15,17 @@ class PagamentoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pagamento)
 
-        val pacote = Pacote("sao_paulo_sp", "São Paulo", 10, BigDecimal(243.99))
+        if(intent.hasExtra("pacote")){
 
-        pagamento_valor.text = pacote.preco.formatado()
+            val pacote = intent.getSerializableExtra("pacote") as Pacote
 
-        pagamento_botao_finalizar.setOnClickListener {
-            val i = Intent(this, ResumoCompraActivity::class.java)
-            startActivity(i)
+            pagamento_valor.text = pacote.preco.formatado()
+
+            pagamento_botao_finalizar.setOnClickListener {
+                val i = Intent(this, ResumoCompraActivity::class.java)
+                i.putExtra("pacote", pacote)
+                startActivity(i)
+            }
         }
-
     }
 }
