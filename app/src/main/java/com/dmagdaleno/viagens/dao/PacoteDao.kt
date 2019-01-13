@@ -6,11 +6,11 @@ import java.math.BigDecimal
 class PacoteDao {
 
     fun lista(): List<Pacote> = listOf(
-        Pacote("sao_paulo_sp", "São Paulo", 2, BigDecimal(243.99)),
-        Pacote("belo_horizonte_mg", "Belo Horizonte", 3, BigDecimal(421.50)),
-        Pacote("recife_pe", "Recife", 4, BigDecimal(754.20)),
-        Pacote("rio_de_janeiro_rj", "Rio de Janeiro", 6, BigDecimal(532.55)),
-        Pacote("salvador_ba", "Salvador", 5, BigDecimal(899.99)),
-        Pacote("foz_do_iguacu_pr", "Foz do Iguaçu", 1, BigDecimal(289.90))
+        Pacote("sao_paulo_sp", "São Paulo", 2, 243.99),
+        Pacote("belo_horizonte_mg", "Belo Horizonte", 3, 421.50),
+        Pacote("recife_pe", "Recife", 4, 754.20),
+        Pacote("rio_de_janeiro_rj", "Rio de Janeiro", 6, 532.55),
+        Pacote("salvador_ba", "Salvador", 5, 899.99),
+        Pacote("foz_do_iguacu_pr", "Foz do Iguaçu", 1, 289.90)
     )
 }

@@ -1,8 +1,7 @@
 package com.dmagdaleno.viagens.functions.extensions
 
-import java.math.BigDecimal
 import java.text.DecimalFormat
-import java.util.Locale
+import java.util.*
 
 fun Double.formatado(): String {
     return DecimalFormat.getCurrencyInstance(Locale("pt", "BR"))
