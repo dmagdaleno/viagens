@@ -26,9 +26,11 @@ class ListaPacotesActivity : AppCompatActivity() {
     private fun configuraListaPacotes() {
         val pacotes = PacoteDao().lista()
         lista_pacotes_list.adapter = ListaPacotesAdapter(this, pacotes)
-        lista_pacotes_list.setOnItemClickListener { adapterView, view, i, l ->
-            val i = Intent(this, ResumoPacoteActivity::class.java)
-            startActivity(i)
+        lista_pacotes_list.setOnItemClickListener { _, _, i, l ->
+            val pacote = pacotes[i]
+            val intent = Intent(this, ResumoPacoteActivity::class.java)
+            intent.putExtra("pacote", pacote)
+            startActivity(intent)
         }
     }
 }
