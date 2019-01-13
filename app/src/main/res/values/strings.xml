@@ -15,4 +15,5 @@
     <string name="cvc_cartao">CVC</string>
     <string name="nome_titular_cartao">Nome do titular</string>
     <string name="finalizar_compra">Finalizar compra</string>
+    <string name="caracteres_aceitos_nome_cartao">abcçdefghijklmnopqrstuvwxyzABCÇDEFGHIJKLMNOPQRSTUVWXYZ\u0020</string>
 </resources>
