@@ -11,9 +11,7 @@
         android:id="@+id/pagamento_texto"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_margin="20dp"
         android:text="@string/texto_pagamento"
         android:textAlignment="center"
         android:textStyle="bold"
@@ -42,11 +40,10 @@
         android:layout_marginTop="8dp"
         android:textColor="@android:color/holo_green_dark"
         android:textSize="24sp"
-        android:text="R$ 421,50"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pagamento_texto_valor"
-        tools:text="R$ 421,50" />
+        tools:text="R$ 243,99" />
 
     <EditText
         android:id="@+id/pagamento_num_cartao"
@@ -105,7 +102,7 @@
         android:layout_marginTop="8dp"
         android:hint="@string/nome_titular_cartao"
         android:inputType="textPersonName"
-        android:maxLength="3"
+        android:digits="abcçdefghijklmnopqrstuvwxyzABCÇDEFGHIJKLMNOPQRSTUVWXYZ "
         app:layout_constraintTop_toBottomOf="@id/pagamento_cvc_cartao"
         app:layout_constraintStart_toStartOf="@id/pagamento_validade_cartao_mes"
         app:layout_constraintEnd_toEndOf="@id/pagamento_cvc_cartao" />
