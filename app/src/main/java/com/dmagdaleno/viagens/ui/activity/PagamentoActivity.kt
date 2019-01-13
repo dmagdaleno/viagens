@@ -17,7 +17,7 @@ class PagamentoActivity : AppCompatActivity() {
 
         if(intent.hasExtra("pacote")){
 
-            val pacote = intent.getSerializableExtra("pacote") as Pacote
+            val pacote = intent.extras.getParcelable("pacote") as Pacote
 
             pagamento_valor.text = pacote.preco.formatado()
 

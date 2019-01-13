@@ -20,7 +20,7 @@ class ResumoPacoteActivity : AppCompatActivity() {
 
         if(intent.hasExtra("pacote")){
 
-            val pacote = intent.getSerializableExtra("pacote") as Pacote
+            val pacote = intent.extras.getParcelable("pacote") as Pacote
             resumo_pacote_imagem.setImageDrawable(getDrawableResource(pacote.imagem))
             resumo_pacote_local.text = pacote.local
             resumo_pacote_dias.text = extraiPeriodo(pacote.dias)

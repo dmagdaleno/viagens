@@ -18,7 +18,7 @@ class ResumoCompraActivity : AppCompatActivity() {
 
         if(intent.hasExtra("pacote")){
 
-            val pacote = intent.getSerializableExtra("pacote") as Pacote
+            val pacote = intent.extras.getParcelable("pacote") as Pacote
 
             resumo_compra_foto_local.setImageDrawable(getDrawableResource(pacote.imagem))
             resumo_compra_local.text = pacote.local
