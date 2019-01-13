@@ -12,4 +12,7 @@
     <string name="num_cartao">Número do cartão</string>
     <string name="validade_cartao_mes">MM</string>
     <string name="validade_cartao_ano">AA</string>
+    <string name="cvc_cartao">CVC</string>
+    <string name="nome_titular_cartao">Nome do titular</string>
+    <string name="finalizar_compra">Finalizar compra</string>
 </resources>
