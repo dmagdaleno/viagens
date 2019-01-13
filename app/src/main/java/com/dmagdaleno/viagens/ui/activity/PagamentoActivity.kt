@@ -1,5 +1,6 @@
 package com.dmagdaleno.viagens.ui.activity
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.dmagdaleno.viagens.R
@@ -17,5 +18,11 @@ class PagamentoActivity : AppCompatActivity() {
         val pacote = Pacote("sao_paulo_sp", "São Paulo", 10, BigDecimal(243.99))
 
         pagamento_valor.text = pacote.preco.formatado()
+
+        pagamento_botao_finalizar.setOnClickListener {
+            val i = Intent(this, ResumoCompraActivity::class.java)
+            startActivity(i)
+        }
+
     }
 }
