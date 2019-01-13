@@ -1,5 +1,6 @@
 package com.dmagdaleno.viagens.ui.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.dmagdaleno.viagens.R
@@ -27,5 +28,10 @@ class ResumoPacoteActivity : AppCompatActivity() {
         val data = getDataIdaVoltaFormatada(pacote)
 
         resumo_pacote_data.text = data
+
+        resumo_pacote_botao_realiza_pagamento.setOnClickListener {
+            val i = Intent(this, PagamentoActivity::class.java)
+            startActivity(i)
+        }
     }
 }
