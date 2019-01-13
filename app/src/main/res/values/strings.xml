@@ -16,4 +16,8 @@
     <string name="nome_titular_cartao">Nome do titular</string>
     <string name="finalizar_compra">Finalizar compra</string>
     <string name="caracteres_aceitos_nome_cartao">abcçdefghijklmnopqrstuvwxyzABCÇDEFGHIJKLMNOPQRSTUVWXYZ\u0020</string>
+    <string name="resumo_compra_titulo">Parabéns!</string>
+    <string name="resumo_compra_texto">Compra realizada com sucesso :)</string>
+    <string name="resumo_compra_texto_confira">Confira o resumo da compra:</string>
+    <string name="foto_do_local_do_pacote">foto do local do pacote</string>
 </resources>
