@@ -18,20 +18,23 @@ class ResumoPacoteActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_resumo_pacote)
 
-        val pacote = Pacote("sao_paulo_sp", "São Paulo", 10, BigDecimal(243.99))
+        if(intent.hasExtra("pacote")){
 
-        resumo_pacote_imagem.setImageDrawable(getDrawableResource(pacote.imagem))
-        resumo_pacote_local.text = pacote.local
-        resumo_pacote_dias.text = extraiPeriodo(pacote.dias)
-        resumo_pacote_preco.text = pacote.preco.formatado()
+            val pacote = intent.getSerializableExtra("pacote") as Pacote
+            resumo_pacote_imagem.setImageDrawable(getDrawableResource(pacote.imagem))
+            resumo_pacote_local.text = pacote.local
+            resumo_pacote_dias.text = extraiPeriodo(pacote.dias)
+            resumo_pacote_preco.text = pacote.preco.formatado()
 
-        val data = getDataIdaVoltaFormatada(pacote)
+            val data = getDataIdaVoltaFormatada(pacote)
 
-        resumo_pacote_data.text = data
+            resumo_pacote_data.text = data
 
-        resumo_pacote_botao_realiza_pagamento.setOnClickListener {
-            val i = Intent(this, PagamentoActivity::class.java)
-            startActivity(i)
+            resumo_pacote_botao_realiza_pagamento.setOnClickListener {
+                val i = Intent(this, PagamentoActivity::class.java)
+                i.putExtra("pacote", pacote)
+                startActivity(i)
+            }
         }
     }
 }
