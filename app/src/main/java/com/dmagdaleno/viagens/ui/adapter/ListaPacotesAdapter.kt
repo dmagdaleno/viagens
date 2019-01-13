@@ -8,7 +8,7 @@ import android.widget.BaseAdapter
 import com.dmagdaleno.viagens.R
 import com.dmagdaleno.viagens.functions.extensions.formatado
 import com.dmagdaleno.viagens.functions.extensions.getDrawableResource
-import com.dmagdaleno.viagens.functions.getDiasText
+import com.dmagdaleno.viagens.functions.extraiPeriodo
 import com.dmagdaleno.viagens.model.Pacote
 import kotlinx.android.synthetic.main.item_pacote.view.*
 
@@ -41,7 +41,7 @@ class ListaPacotesAdapter(
     }
 
     private fun View.configuraDias(pacote: Pacote) {
-        item_pacote_dias.text = getDiasText(pacote.dias)
+        item_pacote_dias.text = extraiPeriodo(pacote.dias)
     }
 
     private fun View.configuraLocal(pacote: Pacote) {
