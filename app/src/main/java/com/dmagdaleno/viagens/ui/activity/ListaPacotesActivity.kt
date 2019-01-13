@@ -21,13 +21,14 @@ class ListaPacotesActivity : AppCompatActivity() {
         title = TITULO_APP
 
         configuraListaPacotes()
-
-        val i = Intent(this, PagamentoActivity::class.java)
-        startActivity(i)
     }
 
     private fun configuraListaPacotes() {
         val pacotes = PacoteDao().lista()
         lista_pacotes_list.adapter = ListaPacotesAdapter(this, pacotes)
+        lista_pacotes_list.setOnItemClickListener { adapterView, view, i, l ->
+            val i = Intent(this, ResumoPacoteActivity::class.java)
+            startActivity(i)
+        }
     }
 }
