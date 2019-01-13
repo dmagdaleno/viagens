@@ -7,4 +7,9 @@
     <string name="final_price">Preço final:</string>
     <string name="region">imagem da regiao</string>
     <string name="pay">Realizar Pagamento</string>
+    <string name="texto_pagamento">Digite as informações do cartão de crédito que você deseja usar para o pagamento</string>
+    <string name="val_compra">Valor da compra:</string>
+    <string name="num_cartao">Número do cartão</string>
+    <string name="validade_cartao_mes">MM</string>
+    <string name="validade_cartao_ano">AA</string>
 </resources>

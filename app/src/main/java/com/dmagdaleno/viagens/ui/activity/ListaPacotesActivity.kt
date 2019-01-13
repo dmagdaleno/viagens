@@ -22,7 +22,7 @@ class ListaPacotesActivity : AppCompatActivity() {
 
         configuraListaPacotes()
 
-        val i = Intent(this, ResumoPacoteActivity::class.java)
+        val i = Intent(this, PagamentoActivity::class.java)
         startActivity(i)
     }
 
