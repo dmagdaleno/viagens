@@ -1,5 +1,6 @@
 package com.dmagdaleno.viagens.model
 
+import java.io.Serializable
 import java.math.BigDecimal
 
 data class Pacote(
@@ -7,4 +8,4 @@ data class Pacote(
         val local: String = "indefinido",
         val dias: Int = 0,
         val preco: BigDecimal = BigDecimal.ZERO
-)
+): Serializable
