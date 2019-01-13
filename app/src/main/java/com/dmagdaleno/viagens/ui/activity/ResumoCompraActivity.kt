@@ -16,11 +16,14 @@ class ResumoCompraActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_resumo_compra)
 
-        val pacote = Pacote("sao_paulo_sp", "São Paulo", 10, BigDecimal(243.99))
+        if(intent.hasExtra("pacote")){
 
-        resumo_compra_foto_local.setImageDrawable(getDrawableResource(pacote.imagem))
-        resumo_compra_local.text = pacote.local
-        resumo_compra_periodo.text = extraiPeriodo(pacote.dias)
-        resumo_compra_preco.text = pacote.preco.formatado()
+            val pacote = intent.getSerializableExtra("pacote") as Pacote
+
+            resumo_compra_foto_local.setImageDrawable(getDrawableResource(pacote.imagem))
+            resumo_compra_local.text = pacote.local
+            resumo_compra_periodo.text = extraiPeriodo(pacote.dias)
+            resumo_compra_preco.text = pacote.preco.formatado()
+        }
     }
 }
